@@ -70,15 +70,11 @@ def predict():
     if x_predict==1:
         b=Label(frame1,text='Iris Versicolor',font=18,bd=1)
         b.grid(row=0,column=0)
-        # img=PhotoImage(file='setosa.png')
-        # a2=Label(frame1,image=img)
-        # a2.grid(row=3,column=0)
+
     if x_predict==2:
         c=Label(frame1,text='Iris Virginica',font=18,bd=1)
         c.grid(row=0,column=0)
-        # img=PhotoImage(file='setosa.png')
-        # a3=Label(frame1,image=img)
-        # a3.grid(row=3,column=0)
+
     #==VALIDATION===
     validation=knn.predict(x_test)
     percentage=round(np.mean(validation==y_test)*100,2)
